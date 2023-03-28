@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'Audrey';
+    src: url('../fonts/audrey/Audrey-Normal.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/poppins/Poppins-Light.ttf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Muli';
+    src: url('../fonts/muli/Muli-Light.ttf') format('opentype');
+}

@@ -1,0 +1,133 @@
+/* Set the navbar background to transparent */
+.navbar {
+  background-color: transparent;
+  margin-top: 1.27rem;
+  font-family: 'Audrey';
+  font-size: 17px;
+  opacity: 0;
+  transform: translateY(-100%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999; /* Set the z-index to a high value to make the navbar appear on top of other elements */
+  animation: slide-down 1.2s ease-in-out forwards, fade-in 1.7s ease-in-out forwards; /* Add the slide-down and fade-in animations */
+  animation-delay: 1s;
+}
+
+/* Define the slide-down animation */
+@keyframes slide-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Define the fade-in animation */
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.navbar-brand img {
+  max-width: 36px;
+  height: auto;
+}
+
+navbar-nav .nav-link {
+  position: relative;
+  color: black;
+  text-decoration: none;
+}
+
+.navbar-nav .nav-link {
+  position: relative;
+  color: black;
+  text-decoration: none;
+}
+
+.navbar-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0px; /* Adjust this value to control the distance between the text and the underline */
+  width: 0;
+  height: 1px;
+  background-color: grey;
+  transform: translateX(-50%) scaleX(0); /* Set the initial scale to 0 and center the underline */
+  transform-origin: center; /* Set the transform origin to the center of the underline */
+  transition: transform 0.1s ease-in-out, width 0.1s ease-in-out; /* Add a transition for both the transform and width properties */
+}
+
+.navbar-nav .nav-link:hover::after {
+  width: 50%; /* Set the width to 50% on hover */
+  transform: translateX(-50%) scaleX(1); /* Set the scale to 1 and center the underline on hover */
+}
+
+.navbar-nav .nav-link:hover {
+  color: grey; /* Set the color of the link text to a faded black on hover */
+}
+
+
+
+/* Adjust the margin and padding of the logo and links */
+.navbar-brand {
+  margin-left: 11.2vh; /* Adjust the left margin of the logo */
+}
+
+.nav-item {
+  margin-left: 3vh; /* Adjust the left margin of each nav link */
+}
+
+/* Add space to the right of the menu button */
+.navbar-toggler {
+  margin-right: 1rem; /* Adjust the right margin of the menu button */
+}
+
+/* Add space to the right of the nav links */
+.navbar-nav {
+  margin-right: 13vh; /* Adjust the right margin of the nav links container */
+}
+
+/* Logo */
+.navbar-brand img {
+  transition: transform 0.2s ease-in-out; /* Add a 0.2 second transition effect */
+}
+
+.navbar-brand:hover img {
+  transform: translateY(-5px); /* Move the logo up by 5 pixels on hover */
+}
+
+/* Nav links */
+.navbar-nav .nav-link {
+  transition: transform 0.2s ease-in-out; /* Add a 0.2 second transition effect */
+}
+
+.navbar-nav .nav-link:hover {
+  transform: translateY(-5px); /* Move the nav links up by 5 pixels on hover */
+}
+
+
+/* Make the navbar responsive */
+@media (max-width: 991.98px) {
+  .navbar-brand {
+      margin-left: 0.5rem; /* Adjust the left margin of the logo on smaller screens */
+  }
+
+  .nav-item {
+      margin-left: 0.5rem; /* Adjust the left margin of each nav link on smaller screens */
+  }
+
+  /* Add space to the right of the nav links on smaller screens */
+  .navbar-nav {
+      margin-right: 0.5rem; /* Adjust the right margin of the nav links container on smaller screens */
+  }
+}
